@@ -1,0 +1,1 @@
+select * from {{ source('google_analytics','ft_google_analytics_report_1') }}

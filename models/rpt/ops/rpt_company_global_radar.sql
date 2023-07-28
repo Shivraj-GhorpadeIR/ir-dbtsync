@@ -1,0 +1,1 @@
+select * from {{ ref('int_company_global_radar') }}

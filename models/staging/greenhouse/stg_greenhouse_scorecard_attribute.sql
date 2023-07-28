@@ -1,0 +1,1 @@
+select * from {{ source('greenhouse','scorecard_attribute') }}

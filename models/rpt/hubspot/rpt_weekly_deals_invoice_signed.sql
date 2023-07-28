@@ -1,0 +1,1 @@
+select * from {{ ref('int_weekly_deals_invoice_signed') }}

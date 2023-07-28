@@ -1,0 +1,1 @@
+select * from {{ ref('int_honeypot_file_info_carlton_fields') }}

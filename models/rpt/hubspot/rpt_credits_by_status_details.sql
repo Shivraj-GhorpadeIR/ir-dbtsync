@@ -1,0 +1,1 @@
+select * from {{ ref('int_credits_by_status_details') }}

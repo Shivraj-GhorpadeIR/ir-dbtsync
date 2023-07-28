@@ -1,0 +1,368 @@
+version: 2
+
+#add tests, pk, unique key, freshness, 
+
+sources:
+  - name: hubspot_hp
+    database: raw_data
+    schema: hubspot_hp
+    description: A collection of tables related to hubspot honeypot data.
+    tables:
+      - name: ambassador
+      - name: ambassador_to_company
+      - name: ambassador_to_contact
+      - name: ambassador_to_deal
+      - name: ambassador_to_referral_partner
+      - name: ambassador_to_ticket
+      - name: association_type
+      - name: calendar_event
+      - name: calendar_user
+      - name: campaigns
+      - name: campaigns_to_company
+      - name: campaigns_to_contact
+      - name: campaigns_to_referral_partner
+      - name: campaigns_to_ticket
+      - name: company
+      - name: company_property_history
+      - name: contact
+      - name: contact_company
+      - name: contact_form_submission
+      - name: contact_list
+      - name: contact_list_member
+      - name: contact_property_history
+      - name: cpa
+      - name: cpa_to_contact
+      - name: cpa_to_deal
+      - name: cpa_to_ticket
+      - name: credit
+      - name: credit_to_company
+      - name: credit_to_contact
+      - name: credit_to_deal
+      - name: credit_to_email
+      - name: credit_to_ticket
+      - name: deal
+      - name: deal_company
+      - name: deal_contact
+      - name: deal_pipeline
+      - name: deal_pipeline_stage
+      - name: deal_property_history
+      - name: deal_stage
+      - name: email_campaign
+      - name: email_event
+      - name: email_event_click
+      - name: email_event_deferred
+      - name: email_event_delivered
+      - name: email_event_dropped
+      - name: email_event_open
+      - name: email_event_sent
+      - name: email_event_spam_report
+      - name: email_event_status_change
+      - name: email_event_suppressed
+      - name: email_subscription
+      - name: email_subscription_change
+      - name: engagement
+      - name: engagement_call
+      - name: engagement_communication
+      - name: engagement_company
+      - name: engagement_contact
+      - name: engagement_deal
+      - name: engagement_email
+      - name: engagement_meeting
+      - name: engagement_note
+      - name: engagement_postal_mail
+      - name: engagement_property_history
+      - name: engagement_task
+      - name: form
+      - name: line_item
+      - name: line_item_deal
+      - name: line_item_property_history
+      - name: marketing_email
+      - name: marketing_email_campaign
+      - name: marketing_email_contact_list
+      - name: merged_deal
+      - name: owner
+      - name: owner_team
+      - name: product
+      - name: product_property_history
+      - name: property
+      - name: property_option
+      - name: referral_partner
+      - name: referral_partner_to_ambassador
+      - name: referral_partner_to_campaigns
+      - name: referral_partner_to_company
+      - name: referral_partner_to_contact
+      - name: referral_partner_to_deal
+      - name: referral_partner_to_email
+      - name: referral_partner_to_ticket
+      - name: role
+      - name: team
+      - name: team_user
+      - name: ticket
+      - name: ticket_company
+      - name: ticket_contact
+      - name: ticket_deal
+      - name: ticket_engagement
+      - name: ticket_pipeline
+      - name: ticket_pipeline_stage
+      - name: ticket_property_history
+      - name: upload
+      - name: upload_to_deal
+      - name: upload_to_email
+      - name: upload_to_line_item
+      - name: users
+
+  - name: rds_application_prod
+    database: analytics
+    schema: rds_application_prod
+    description: A collection of tables related to hubspot milkshake data.
+    tables:
+      - name: application_deal
+      - name: application_historicaldeal
+      - name: data_dealstep
+      - name: application_estimate
+      - name: application_company
+
+  - name: sage
+    database: raw_data
+    schema: ft_sage
+    description: This is where the source data for Sage via Fivetran is used.
+    tables:
+      - name: acct_range
+      - name: ach_bank
+      - name: activity_log
+      - name: ap_adjustment
+      - name: ap_adjustment_item
+      - name: ap_advance
+      - name: ap_advance_item
+      - name: ap_bill
+      - name: ap_bill_item
+      - name: ap_bill_payment
+      - name: ap_payment
+      - name: ap_payment_item
+      - name: ap_payment_request
+      - name: ap_pymt
+      - name: ap_pymt_detail
+      - name: ap_recur_bill
+      - name: ap_recur_bill_entry
+      - name: ap_term
+      - name: ar_adjustment
+      - name: ar_adjustment_item
+      - name: ar_invoice
+      - name: ar_invoice_item
+      - name: ar_invoice_payment
+      - name: ar_payment
+      - name: ar_payment_batch
+      - name: ar_payment_item
+      - name: ar_pymt
+      - name: ar_pymt_detail
+      - name: ar_term
+      - name: bank_fee
+      - name: bank_fee_entry
+      - name: cc_transaction
+      - name: cc_transaction_entry
+      - name: checking_account
+      - name: class
+      - name: company
+      - name: company_pref
+      - name: contact
+      - name: credit_card
+      - name: customer
+      - name: department
+      - name: department_group
+      - name: email_template
+      - name: employee
+      - name: fivetran_audit
+      - name: funds_transfer
+      - name: funds_transfer_entry
+      - name: gl_account
+      - name: go_acct_grp
+      - name: gl_acct_grp_member
+      - name: gl_batch
+      - name: gl_coa_cat_member
+      - name: gl_comp_grp_member
+      - name: gl_detail
+      - name: gl_entry
+      - name: gl_journal
+      - name: item
+      - name: item_gl_group
+      - name: item_group
+      - name: journal
+      - name: location
+      - name: location_entity
+      - name: location_group
+      - name: other_receipts
+      - name: other_receipts_entry
+      - name: po_approval_delegate_detail
+      - name: reporting_period
+      - name: role_users
+      - name: roles
+      - name: savings_account
+      - name: so_document
+      - name: so_document_entry
+      - name: so_document_params
+      - name: trx_currencies
+      - name: user_adj_book
+      - name: user_adj_jrnl
+      - name: user_group
+      - name: user_info
+      - name: user_rights
+      - name: vendor
+      - name: vendor_visibility
+
+  - name: hubspot_milkshake
+    database: raw_data
+    schema: hubspot_milkshake
+    description: A collection of tables related to hubspot milkshake data from CRM.
+    tables:
+      - name: affiliates
+      - name: affiliates_to_company
+      - name: affiliates_to_contact
+      - name: affiliates_to_deal
+      - name: association_type
+      - name: calendar_event
+      - name: company
+      - name: company_property_history
+      - name: contact
+      - name: contact_company
+      - name: contact_property_history
+      - name: deal
+      - name: deal_company
+      - name: deal_contact
+      - name: deal_pipeline
+      - name: deal_pipeline_stage
+      - name: deal_property_history
+      - name: deal_stage
+      - name: email_subscription
+      - name: engagement
+      - name: engagement_company
+      - name: engagement_deal
+      - name: engagement_note
+      - name: engagement_property_history
+      - name: form
+      - name: marketing_email
+      - name: marketing_email_campaign
+      - name: owner
+      - name: owner_team
+      - name: property
+      - name: property_option
+      - name: role
+      - name: team
+      - name: team_user
+      - name: ticket_pipeline
+      - name: ticket_pipeline_stage
+      - name: users
+
+  - name: custom_sage
+    database: raw_data
+    schema: custom_sage
+    description: custom objects from sage needed for reference data.
+    tables:
+      - name: document_to_credit_id_temp
+      - name: sodocument_custom_fields
+
+  - name: stg_ref
+    database: raw_data
+    schema: stg_ref
+    description: A collection of staging tables needed for referential data.
+    tables:
+      - name: quarter_erc_ref
+      - name: cra_legacy_ref
+      - name: cra_5050_ref
+      - name: cash_collection_timing_curves
+      - name: cash_collection_lags
+      - name: cash_collection_forecast_volume
+      - name: date_ref
+
+
+  - name: dialpad
+    database: raw_data
+    schema: ft_dialpad
+    description: A collection of tables related to dialpad
+    tables:
+      - name: calls_records
+      - name: calls_stats
+      - name: texts_records
+
+  - name: taxpreparers
+    database: raw_data
+    schema: ft_taxpreparers
+    description: Data uploaded to IR for each specific traxpreparer IR uses
+    tables:
+      - name: asure_monitoring_data
+      - name: crl_monitoring_data
+      - name: rebeck_monitoring_data
+      - name: slt_monitoring_data
+      - name: slt_ths_front_page
+      - name: travis_watkins_lar_monitoring_data
+      - name: travis_watkins_law_ths_front_page
+
+  - name: google_analytics
+    database: raw_data
+    schema: ft_google_analytics
+    description: A collection of tables related to google analytics data.
+    tables:
+      - name: accounts
+      - name: ft_google_analytics_report_1
+      - name: properties
+
+  - name: greenhouse
+    database: raw_data
+    schema: greenhouse
+    description: A collection of tables related to google analytics data.
+    tables:
+      - name: activity
+      - name: address
+      - name: application
+      - name: application_qna
+      - name: attachment
+      - name: candidate
+      - name: candidate_tag
+      - name: close_reason
+      - name: degree
+      - name: demographic_answer_option
+      - name: demographic_question_set
+      - name: demographic_questions
+      - name: department
+      - name: discipline
+      - name: education
+      - name: eeoc
+      - name: email
+      - name: email_address
+      - name: email_cc
+      - name: email_template
+      - name: employment
+      - name: hiring_team
+      - name: interview
+      - name: interview_question
+      - name: job
+      - name: job_application
+      - name: job_department
+      - name: job_office
+      - name: job_opening
+      - name: job_post
+      - name: job_post_question
+      - name: job_stage
+      - name: note
+      - name: offer
+      - name: office
+      - name: phone_number
+      - name: prospect_pool
+      - name: prospect_stage
+      - name: rejection_reason
+      - name: scheduled_interview
+      - name: scheduled_interviewer
+      - name: school
+      - name: scorecard
+      - name: scorecard_attribute
+      - name: scorecard_qna
+      - name: social_media_address
+      - name: source
+      - name: tag
+      - name: user
+      - name: user_email
+      - name: user_linked_candidate
+      - name: user_permission
+      - name: user_role
+      - name: website_address
+
+

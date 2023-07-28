@@ -1,0 +1,1 @@
+select * from {{ ref('int_hubspot_to_sage_order_form_partial_week_monthstart') }}

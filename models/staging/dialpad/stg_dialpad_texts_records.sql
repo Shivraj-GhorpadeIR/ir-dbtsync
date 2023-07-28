@@ -1,0 +1,1 @@
+select * from {{ source('dialpad','texts_records') }}

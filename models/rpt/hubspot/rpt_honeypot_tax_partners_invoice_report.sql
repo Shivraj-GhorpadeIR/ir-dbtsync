@@ -1,0 +1,1 @@
+select * from {{ ref('int_honeypot_tax_partners_invoice_report') }}

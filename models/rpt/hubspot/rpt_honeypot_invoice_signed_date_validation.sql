@@ -1,0 +1,1 @@
+select * from {{ ref('int_honeypot_invoice_signed_date_validation') }}

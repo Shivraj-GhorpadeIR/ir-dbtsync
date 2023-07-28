@@ -1,0 +1,1 @@
+select * from {{ ref('int_personal_global_radar') }}

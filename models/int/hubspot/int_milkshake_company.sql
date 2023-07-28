@@ -1,0 +1,1 @@
+select * from {{ ref('stg_rds_application_prod_application_company') }}
